@@ -4,8 +4,7 @@ import mongoengine as db
 
 app = Flask(__name__)
 
-db.connect(host="mongodb+srv://ttoha12:unccs123@cluster0.hfkl9bk.mongodb.net/flaskapp",
-           connectTimeoutMS=30000, socketTimeoutMS=None, connect=False, maxPoolsize=1)
+db.connect(host="mongodb+srv://ttoha12:unccs123@cluster0.hfkl9bk.mongodb.net/flaskapp")
 
 
 # db.connect("flaskapp")
@@ -60,6 +59,5 @@ def delete_record():
         user.delete()
     return jsonify(user.to_json())
 
-
-if __name__ == "__main__":
-    app.run(debug=True)
+# if __name__ == "__main__":
+#     app.run(debug=True)
