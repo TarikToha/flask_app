@@ -7,7 +7,7 @@ prod = True
 app = Flask(__name__)
 
 if prod:
-    db.connect(host="mongxodb+srv://ttoha12:unccs123@cluster0.hfkl9bk.mongodb.net/flaskapp")
+    db.connect(host="mongodb+srv://ttoha12:unccs123@cluster0.hfkl9bk.mongodb.net/flaskapp")
 else:
     db.connect("flaskapp")
 
